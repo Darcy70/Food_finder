@@ -7,6 +7,8 @@ class Restaurant
 
   end
 
+  attr_accessor :name, :cuisine, :price
+
   def self.file_exists?
     # class should know if the restaurant file exits
     if @@filepath && File.exists?(@@filepath)
@@ -35,5 +37,14 @@ class Restaurant
     # read the restaurant file
     # return instances of restaurant
   end
+
+  def save
+    return false unless Restaurant.file_usable?
+    File.open(@@filepath, 'a') do |file|
+      file.puts "#{[@name, @cuisine, @price].join("\t")}\n"
+    end
+    return true
+  end
+
 
 end
