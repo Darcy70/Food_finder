@@ -11,3 +11,6 @@ App_ROOT = File.dirname(__FILE__)
 
 $:.unshift(File.join(App_ROOT, 'lib'))
 require 'guide'
+
+guide = Guide.new('restaurants.txt')
+guide.launch!
