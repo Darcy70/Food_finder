@@ -2,3 +2,5 @@ Hot tamale	mexican	24
 Cafe Masala	Indian	30
 pita pocket	fast food	100
 Hongpao	Chinese	50
+taste of little italy	pizza	10
+quick cup	coffee	5
